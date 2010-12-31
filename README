@@ -1,0 +1,6 @@
+Basic Game Engine Currently.
+ChangeLog:
+
+~31 December 2010
+- Set some stats in NormalMonster(Basic Fetching)
+- Adding Attribute handling in Attributes.py

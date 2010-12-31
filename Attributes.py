@@ -4,7 +4,7 @@
 # (c) 2010 Xenlus Group
 #
 # This software is provided as-is, with GNU GPLv3 License attached. You are
-# required to give a full copyright and the attached License if you released
+# required to retain a full copyright and the attached License if you released
 # or modified any of the code.
 #
 # Permission is granted to use this software for any legal purpose, provided
@@ -18,7 +18,7 @@ AttributeAbbreviations = ["Hp", "PDmg", "MDmg", "PDef", "MDef", "Spd"]
 
 class Attributes:
     def __init__(self):
-        self.Stats = [4,4,4,4,4,1]
+        self.Stats = [0,0,0,0,0,0]
         self.Skills = dict()
         self.Level = 0
 
@@ -31,3 +31,13 @@ class Attributes:
             except:
                 attrIndex = 0
         self.Stats[attrIndex] += amount
+
+    def GetLevel(self):
+        if (self.Level<1):
+            return self.AdjustLevel()
+        else:
+            return self.Level
+
+    def AdjustLevel(self, setLevel):
+        self.Level = setLevel
+        return self.Level

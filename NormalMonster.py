@@ -4,7 +4,7 @@
 # (c) 2010 Xenlus Group
 #
 # This software is provided as-is, with GNU GPLv3 License attached. You are
-# required to give a full copyright and the attached License if you released
+# required to retain a full copyright and the attached License if you released
 # or modified any of the code.
 #
 # Permission is granted to use this software for any legal purpose, provided
@@ -15,10 +15,28 @@
 
 import Attributes
 
+
+# This are basic fetching stats from Monster, in time there will be different
+# types of monster and the handling will need to be changed to XML to cover
+# all the stats from each monster.
 class Monster():
     def __init__(self):
-        self.Stats = [4,4,4,4,4]
-        self.Skills = dict()
-        self.Level = 0
+        self.Attributes = Attributes.Attributes()
 
+    def SetLevel(self):
+        return self.Attributes.AdjustLevel(1)
+    
     def GetLevel(self):
+        return self.Attributes.GetLevel()
+
+    def SetPDef(self):
+        return self.Attributes.IncreaseAttribute("PDef", 10)
+
+    def SetMDef(self):
+        return self.Attributes.IncreaseAttribute("MDef", 10)
+
+    def SetSpd(self):
+        return self.Attributes.IncreaseAttribute("Spd", 1)
+
+    def GetAttributes(self):
+        return self.Attributes
