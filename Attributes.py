@@ -41,3 +41,14 @@ class Attributes:
     def AdjustLevel(self, setLevel):
         self.Level = setLevel
         return self.Level
+
+    # Fetch Attribute Positioning and return it
+    def GetAttribute(self, attrName):
+        try:
+            attrIndex = AttributeAbbreviations.index(attrName)
+        except:
+            try:
+                attrIndex = AttributeNames.index(attrName)
+            except:
+                return 0
+        return self.Stats[attrIndex]

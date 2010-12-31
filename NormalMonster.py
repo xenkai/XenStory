@@ -29,8 +29,17 @@ class Monster():
     def GetLevel(self):
         return self.Attributes.GetLevel()
 
+    def SetHp(self):
+        return self.Attributes.IncreaseAttribute("Hp", 100)
+    
+    def SetPDmg(self):
+        return self.Attributes.IncreaseAttribute("PDmg", 10)
+
     def SetPDef(self):
         return self.Attributes.IncreaseAttribute("PDef", 10)
+
+    def SetMDmg(self):
+        return self.Attributes.IncreaseAttribute("MDmg", 10)
 
     def SetMDef(self):
         return self.Attributes.IncreaseAttribute("MDef", 10)
