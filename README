@@ -10,3 +10,7 @@ Due to changes in the game story, attributes had been re-introduced.
 - Edited the attribute in Attributes.py
 - Rename NormalMonster.py to PlayerStats.py
 - Edited basic stats for Player(Temporary)
+- Added Player Ability (Portions)
+- Added Level to Attributes.py
+- Added setLvl to PlayerStats.py
+- Added IncreaseAbility function to Attributes.py

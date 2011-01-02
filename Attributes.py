@@ -1,5 +1,5 @@
 # Attributes.py
-# Stats for all
+# Stats for Player
 #
 # (c) 2011 Xenlus Group
 #
@@ -13,12 +13,18 @@
 # would be nice (but not required) to include a link back to
 # http://www.xenlus.com
 
-AttributeNames = ["Health", "PDamage", "PDefence", "Speed"]
-AttributeAbbreviations = ["Hp", "PDmg","PDef", "Spd"]
+AttributeNames = ["Level", "Health", "PDamage", "PDefence", "Speed"]
+# Abbreviations means shorten therefore this variable is just to
+# shorten the AttributeNames.
+AttributeAbbreviations = ["Lvl", "Hp", "PDmg", "PDef", "Spd"]
+# Temporary idea for skills
+Ability = ["Cunning", "Negotiate", "Bully", "Flame"]
 
 class Attributes:
     def __init__(self):
-        self.Stats = [0,0,0,0]
+    	# Pre-defined Stats. Fetching player stats from somewhere(database or text file)
+        self.Stats = [0,0,0,0,0]
+        self.Abilities = dict()
 
     def IncreaseAttribute(self,attrName,amount):
         try:
@@ -40,3 +46,10 @@ class Attributes:
             except:
                 return 0
         return self.Stats[attrIndex]
+        
+    def IncreaseAbility(self, abiliName2, amount):
+    	abiliName = abiliName2.capitalize()
+    	if(self.Abilities.has_key(abiliName)):
+    		self.Abilities[abiliName] += amount
+    	else:
+    		self.Abilities[abiliName] = amount

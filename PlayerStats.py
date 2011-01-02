@@ -23,7 +23,10 @@ import Attributes
 class Player():
     def __init__(self):
         self.Attributes = Attributes.Attributes()
-
+	
+    def setLvl(self):
+    	return self.Attributes.IncreaseAttribute("Lvl", 1)
+    
     def SetHp(self):
         return self.Attributes.IncreaseAttribute("Hp", 100)
     
