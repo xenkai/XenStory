@@ -14,3 +14,7 @@ Due to changes in the game story, attributes had been re-introduced.
 - Added Level to Attributes.py
 - Added setLvl to PlayerStats.py
 - Added IncreaseAbility function to Attributes.py
+- Added Position.py "Which the player is set within a place"
+- Added gameobject.py
+- import gameobject in PlayerStats.py
+- Added PlayerCharacter.py "Where Game Rule information is set for the player's character"

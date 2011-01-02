@@ -13,15 +13,16 @@
 # would be nice (but not required) to include a link back to
 # http://www.xenlus.com
 
-import Attributes
+import Attributes, gameobject
 
 
 # This are basic fetching stats for Player, in time there will be different
 # types of monster and the handling will need to be changed to something else
 # to cover all the stats from each player.
 # This is to be done when the game is ready to be Multiplayer.
-class Player():
+class PlayerStats():
     def __init__(self):
+    	gameobject.GameObject.__init__(self)
         self.Attributes = Attributes.Attributes()
 	
     def setLvl(self):
@@ -41,3 +42,6 @@ class Player():
 
     def GetAttributes(self):
         return self.Attributes
+        
+    def FlagStatChange(self, flag):
+    	self.statChange = flag
