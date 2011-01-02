@@ -4,3 +4,9 @@ ChangeLog:
 ~31 December 2010
 - Set some stats in NormalMonster(Basic Fetching)
 - Adding Attribute handling in Attributes.py
+
+~2 January 2011
+Due to changes in the game story, attributes had been re-introduced.
+- Edited the attribute in Attributes.py
+- Rename NormalMonster.py to PlayerStats.py
+- Edited basic stats for Player(Temporary)
